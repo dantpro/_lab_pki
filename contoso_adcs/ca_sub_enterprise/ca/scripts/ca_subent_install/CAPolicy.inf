@@ -1,0 +1,50 @@
+[Version]
+Signature="$Windows NT$"
+
+[PolicyStatementExtension]
+Policies=InternalPolicy
+
+[InternalPolicy]
+OID=1.2.3.4.1455.67.89.5
+Notice="Certificates Policy Statement"
+URL=http://pki.contoso.lab/pki/cps.txt
+
+[Certsrv_Server]
+RenewalKeyLength=2048
+
+; ===========================
+; Very Long for production
+; ===========================
+;
+RenewalValidityPeriod=Years
+RenewalValidityPeriodUnits=10
+;Default Value -> 5 years
+;RenewalValidityPeriodUnits=5
+; ===========================
+
+; ===========================
+; Very Short for test purpose
+; ===========================
+;
+;;RenewalValidityPeriod=Months
+;;RenewalValidityPeriodUnits=1
+; ============================
+
+; CRL
+CRLPeriod=Days
+CRLPeriodUnits=7
+
+; Delta CRL
+CRLDeltaPeriod=Days
+CRLDeltaPeriodUnits=1
+
+; For Enterprise CA
+LoadDefaultTemplates=0
+
+; Set Alternate Signature Algorithm Extensions
+;
+; To use CNG for 2008R2
+;AlternateSignatureAlgorithm=1
+;
+; To do NOT use CNG for 2008R2
+;DiscreteSignatureAlgorithm=1

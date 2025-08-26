@@ -1,6 +1,6 @@
-# lab pki contoso adcs
+# lab pki
 
-lab pki contoso adcs  
+lab pki  
 
 ---
 
